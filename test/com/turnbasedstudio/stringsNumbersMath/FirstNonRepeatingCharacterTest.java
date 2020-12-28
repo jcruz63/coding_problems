@@ -2,15 +2,17 @@ package com.turnbasedstudio.stringsNumbersMath;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FirstNonRepeatingCharacterTest {
 
 
     @Test
-    public void TestFindFirstNonRepeatingChar(){
+    public void TestFindFirstNonRepeatingChar() {
 
-        assertEquals('h',FirstNonRepeatingCharacter.findFirstNonRepeatingChar("Hello World"));
+        assertEquals('H', FirstNonRepeatingCharacter.findFirstNonRepeatingChar("Hello World"));
+        assertEquals('g', FirstNonRepeatingCharacter.findFirstNonRepeatingChar("llhhgjjkklu"));
+
     }
 
 }
