@@ -7,14 +7,15 @@ package com.turnbasedstudio.datastructs;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class DynamicArray {
+public class Result {
 
-    private final ArrayList<ArrayList<Integer>> masterList;
+    private final List<List<Integer>> masterList;
     private int lastAnswer = 0;
     private final int numberOfSequences;
 
-    public DynamicArray(int numberOfSequences) {
+    public Result(int numberOfSequences) {
         this.numberOfSequences = numberOfSequences;
         this.masterList = new ArrayList<>();
         for (int i = 0; i < numberOfSequences; i++) {
@@ -30,11 +31,20 @@ public class DynamicArray {
         masterList.get(getSequenceListNumber(sequence)).add(numberToInsert);
     }
 
-    public int getSequenceListNumber(int sequence) {
-        if (sequence == 0) {
-            return 0;
-        }
-        return (sequence ^ lastAnswer) % numberOfSequences;
+    public static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
+        // Write your code her
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        Result result = new Result(n);
+        queries.forEach((list) -> {
+            int temp = result.query(list.get(0), list.get(1), list.get(2));
+            if (temp != 0) {
+                arrayList.add(temp);
+                System.out.println(temp);
+            }
+
+        });
+
+        return arrayList;
     }
 
     public int getIntAtSequenceIndex(int sequence, int index) {
@@ -50,5 +60,15 @@ public class DynamicArray {
         lastAnswer = ans;
         return ans;
     }
+
+    public int getSequenceListNumber(int sequence) {
+        if (sequence == 0) {
+            return 0;
+        }
+
+        return (sequence ^ lastAnswer) % numberOfSequences;
+
+    }
+
 
 }
