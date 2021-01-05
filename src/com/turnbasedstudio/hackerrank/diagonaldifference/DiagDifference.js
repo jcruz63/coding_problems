@@ -16,17 +16,18 @@ function diagonalDifference(arr) {
     let primaryDiag = 0;
     let arrElem = [];
 
+    let secondaryDiag = 0;
     for (let i = 0; i < matrixSize; i++) {
         arrElem.push(i);
     }
+    let i,j;
 
-    for (let i = 0; i < arrElem.length; i++) {
-        primaryDiag = primaryDiag += arr[arrElem[i]];
+    for (i=0, j=arrElem.length-1;  i < arrElem.length; i++, j--) {
+        primaryDiag = primaryDiag += arr[arrElem[i]][arrElem[i]];
+        secondaryDiag= secondaryDiag+= arr[arrElem[i]][arrElem[j]];
     }
 
-    console.log(arrElem);
 
-    let secondaryDiag = arr[0][1] + arr[1][0];
 
 
     return Math.abs(primaryDiag - secondaryDiag);
