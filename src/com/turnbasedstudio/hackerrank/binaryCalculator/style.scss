@@ -1,0 +1,24 @@
+#app {
+  width: 33%;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+#btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 5px;
+}
+
+#display {
+  height: 40px;
+  background-color: #7dff7d;
+  color: darkgreen;
+  line-height: 32px;
+  grid-column-start: start;
+  grid-column-end: end;
+}
+
+button {
+  margin: 2px;
+}
