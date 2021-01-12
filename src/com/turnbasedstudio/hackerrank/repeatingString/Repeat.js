@@ -20,6 +20,5 @@ function repeatedString(s, n) {
         return searchForChar(s, n);
     }
 
-
 }
 
