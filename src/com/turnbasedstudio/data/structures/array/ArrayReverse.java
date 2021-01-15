@@ -1,4 +1,4 @@
-package com.turnbasedstudio.datastructs;
+package com.turnbasedstudio.data.structures.array;
 
 public interface ArrayReverse {
     static int[] reverseIntArray(int[] arr) {

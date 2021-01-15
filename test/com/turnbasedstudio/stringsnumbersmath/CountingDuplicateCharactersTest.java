@@ -1,4 +1,4 @@
-package com.turnbasedstudio.stringsNumbersMath;
+package com.turnbasedstudio.stringsnumbersmath;
 
 import org.junit.jupiter.api.Test;
 

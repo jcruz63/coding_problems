@@ -1,4 +1,4 @@
-package com.turnbasedstudio.datastructs;
+package com.turnbasedstudio.data.structures.array;
 
 /*
     This is the answer to https://www.hackerrank.com/challenges/dynamic-array/problem with the corresponding unit test.

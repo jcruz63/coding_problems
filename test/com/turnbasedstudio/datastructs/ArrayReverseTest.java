@@ -1,5 +1,6 @@
 package com.turnbasedstudio.datastructs;
 
+import com.turnbasedstudio.data.structures.array.ArrayReverse;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
