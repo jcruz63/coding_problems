@@ -2,6 +2,8 @@ package com.turnbasedstudio.data.structures.linkedlist;
 
 public interface Menu {
 
+    void play();
+
     void quit();
 
     void next();
@@ -9,4 +11,6 @@ public interface Menu {
     void previous();
 
     void replay();
+
+    void addToQueue(String songTitle);
 }

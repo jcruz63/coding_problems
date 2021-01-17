@@ -2,7 +2,7 @@ package com.turnbasedstudio.data.structures.linkedlist;
 
 import java.time.Duration;
 
-public class Song {
+public class Song implements Playable{
     private String title;
     private Duration duration;
 
